@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background-color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+button{
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+
+select{
+    width: 200px;
+    padding: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    background-color: #a7c5e3;
+}
+
+select:focus, button:focus, input:focus{
+    outline: 0;
+}
+
+.settings-btn{
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+.settings{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 50px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.settings.hide{
+    transform: translateY(-100%);
+}
+
+.settings.settings-form div{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    padding: 10px;
+}
+
+.container{
+    background-color: #34495e;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #fff;
+    width: 400px;
+    position: relative;
+}
+
+h2{
+    background-color: #2c3e50;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 0 0 40px;
+}
+
+h1{
+    margin: 0;
+}
+
+input{
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 16px;
+    width: 250px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.score-container{
+    position: absolute;
+    right: 20px;
+    top: 60px;
+}
+
+.time-container{
+    position: absolute;
+    left: 20px;
+    top: 60px;
+}
+
+.end-game-container{
+    background-color: inherit;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
