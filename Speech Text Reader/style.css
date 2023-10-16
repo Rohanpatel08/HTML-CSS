@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5dc;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    margin: auto;
+    padding: 20px;
+}
+
+.btn{
+    background-color: #e9967a;
+    color: #fff;
+    border: 1px solid #e9967a;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:focus, select:focus, textarea:focus{
+    outline: 0;
+}
+
+.btn-toggle{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.text-box{
+    width: 70%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -800px);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    transition: all 1s ease-in-out;
+}
+
+.text-box.show{
+    transform: translate(-50%, 0);
+}
+
+.text-box select{
+    background-color: #e9967a;
+    border: 0;
+    color: #fff;
+    height: 30px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.text-box textarea{
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.text-box button{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.text-box .close{
+    float: right;
+    cursor: pointer;
+    text-align: right;
+} 
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.box{
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease-out;
+}
+
+.box.active{
+    box-shadow: 0 0 8px 5px darksalmon;
+}
+
+.box img{
+    width: 350px;
+    height: 300px;
+}
+
+.box .info{
+    background-color: #e9967a;
+    color: #fff;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+}
+
+@media (max-width:1400px){
+    main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width:1300px){
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:1000px){
+    main{
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+}
